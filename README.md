@@ -63,7 +63,7 @@ Rehab.cv <- RunCV(form=form, data=dat, classifier=classifier, cv = cv, para=para
 Rehab.para <- get.para(object=Rehab.cv, para=para)
 Rehab.perf <-  get.cvResults(object=Rehab.cv)
 Rehab.perf
-## stargazer(Rehab.perf[, -c(3,4)], summary = FALSE, rownames = FALSE, title = "Performance")
+## stargazer(Rehab.perf, summary = FALSE, rownames = FALSE, title = "Performance")
 nBoots = 100
 Rehab.boot <- RunBootstrap(form=form, data=dat, classifier=classifier,  nBoots = nBoots, para=cv.para, 
                          opt.para=FALSE, val.propo = 0.10, return.model = FALSE, varimp = FALSE, 
