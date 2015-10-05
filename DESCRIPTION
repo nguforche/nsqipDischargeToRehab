@@ -1,0 +1,23 @@
+Package: nsqipDischargeToRehab
+Title: Predict discharge to rehab and 30 days readmission 
+Version: 0.1.0
+Authors@R: c(
+    person("Che", "Ngufor", , "Ngufor.Che@mayo.edu", role = c("aut", "cre")),
+    person("The R Community", role = "ctb",
+      comment = "Some code extracted from packages and online blogs")
+    )
+Maintainer: Che Ngufor <Ngufor.Che@mayo.edu>
+Description: Train and validate a number of machine learning models for
+    predicting discharge to rehab and 30 days re-admission using ACS-NSQIP data
+    on spine surgery
+Depends: R (>= 3.1.2)
+Imports:
+    caret,
+    PresenceAbsence,
+    ELR,
+    kernlab,
+    plyr,
+    missForest
+License: GPL(>= 3)
+LazyData: true
+NeedsCompilation: no
