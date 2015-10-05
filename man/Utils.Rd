@@ -9,6 +9,7 @@
 \alias{Utils}
 \alias{cbind.na}
 \alias{collect.garbage}
+\alias{data.frame.na}
 \alias{get.bootResults}
 \alias{get.cvResults}
 \alias{get.para}
@@ -40,11 +41,14 @@ get.cvResults(object)
 
 get.bootResults(object, alpha = 0.05)
 
-get.varimp(object, alpha = 0.05)
+get.varimp(object, alpha = 0.05, top = 10)
 
 cbind.na(..., deparse.level = 1)
 
 rbind.na(..., deparse.level = 1)
+
+data.frame.na(..., row.names = NULL, check.rows = FALSE,
+  check.names = TRUE, stringsAsFactors = FALSE)
 }
 \arguments{
 \item{Nt}{Sample size}
@@ -74,7 +78,11 @@ considered as constant}
 
 \item{alpha}{significance level}
 
+\item{top}{top number of variables to return}
+
 \item{deparse.level}{see \code{\link[base]{cbind}}}
+
+\item{row.names,check.rows,check.names,stringsAsFactors}{= FALSE see \code{\link[base]{data.frame}}}
 
 \item{\dots}{further arguments passed to or from other methods.}
 }
@@ -83,6 +91,8 @@ training, validation, test data sets or K-fold cross-validation data sets.
 }
 \description{
 Some useful miscellaneous functions
+
+
 
 
 
