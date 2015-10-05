@@ -20,7 +20,7 @@ para = list(
   number = 3,
   GLM = c(), 
   ELR = list(grid = expand.grid(gamma = c(0.01, 0.25, 10.05), p =  c(100, 400, 800)),  
-             ken = "sigmoid", p = 30, gamma = 10.05), 
+             ken = "sigmoid", p = 400, gamma = 10.05), 
   GBM = list(n.trees=10, interaction.depth=1, shrinkage=0.01, 
              mstop = 100, n.minobsinnode = 10,prune = "no", 
              grid = expand.grid(interaction.depth = c(1, 3, 5, 10), 
@@ -29,10 +29,10 @@ para = list(
   RF = list(ntree = 100, mtry = 5), 
   pLDA = list(lambda = 0.5),
   avNNET = list(nnet.size = 50, nnet.decay= 0.001, nnet.bag = 10, maxit = 200), 
-  SVM = list(C = .05, sigma = 0.5, kernel= "rbfdot", grid = expand.grid(C = c(0.01, 1, 10, 100), 
-                                                                        sigma = c(0.001, 0.05, 0.5))),
+  SVM = list(C = .05, sigma = 0.5, kernel= "rbfdot", 
+              grid = expand.grid(C = c(0.01, 1, 10, 100), sigma = c(0.001, 0.05, 0.5))),
   GLMnet = list(alpha = 1, lambda = 1, grid = expand.grid(alpha=c(0,0.5, 1),
-                                                          lambda= c(0.01, 0.05, 0.1, 0.5)))
+                            lambda= c(0.01, 0.05, 0.1, 0.5)))
 ) 
 
 link <- "nsqip_spine_11_12data.csv"
